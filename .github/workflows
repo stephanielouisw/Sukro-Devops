@@ -1,0 +1,20 @@
+name: Super-Linter
+
+on: push
+
+jobs:
+  super-lint:
+    name: Lint code base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Clear GitHub Actions Cache
+        run: rm -rf ~/.cache
+
+      - name: Run Super-Linter
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          DEFAULT_BRANCH: main
