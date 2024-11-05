@@ -4,8 +4,8 @@ from time import sleep
 from flask import Flask, render_template, flash, request, redirect, url_for, session
 from werkzeug.utils import secure_filename
 from flask_session import Session
-from tensorflow.keras.models import model_from_json
-from tensorflow.keras.preprocessing.image import load_img, img_to_array
+from tensorflow.keras.models import model_from_json # type: ignore
+from tensorflow.keras.preprocessing.image import load_img, img_to_array # type: ignore
 
 # Constants for model paths
 MODELS_ARCHITECTURE = 'models/model_corn_disease_1.json'
