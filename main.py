@@ -60,7 +60,7 @@ TIPS2 = [
 @app.route('/')
 def signup():
     return render_template('signup.html')
-@app.route('/login')
+@app.route('/loginn')
 def login():
     return render_template('login.html')
 @app.route('/index')
